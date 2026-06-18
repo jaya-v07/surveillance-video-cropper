@@ -1,0 +1,7 @@
+venv/
+venv
+.DS_Store
+models/
+data/
+yolo8n.pt
+src/tempCodeRunnerFile.py
