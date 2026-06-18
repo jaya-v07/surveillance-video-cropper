@@ -27,28 +27,31 @@ surveillance-video-cropper/
 ├── LICENSE                  # Project license
 ├── README.md                # Documentation
 └── requirements.txt         # Project dependencies
-
+```
 ## 📦 Setup & Installation
-Clone the repository:
-Bash
+### 1. Clone the repository:
+```text
 git clone https://github.com/jaya-v07/surveillance-video-cropper.git
 cd surveillance-video-cropper
-Install the required dependencies:
-Bash
+```
+### 2. Install the required dependencies:
+```text
 pip install -r requirements.txt
-Prepare your data folders:
+```
+### 3. Prepare your data folders:
 Create a data directory in the root of the project and place your input video file there:
-Plaintext
-data/input_vid/sample.mp4
-💡 Note: The data/ folder is pre-configured in .gitignore so your raw videos and outputs won't accidentally be pushed to GitHub.
-💻 How to Run
+```text
+src/data/input_vid/sample.mp4
+```
+### 💻 How to Run
 Execute the script from the root directory using the following command:
-Bash
+```text
 python src/main.py
+```
 To quit the execution loop early, press q while focusing on the preview window.
 Extracted crops will be automatically saved to data/output/.
-⚙️ Configuration
+### ⚙️ Configuration
 You can easily tweak the detection parameters inside src/main.py:
-Frame Rate Sampling: Modify if frame_count % 30 != 0: to change how frequently frames are evaluated.
-Confidence Threshold: Change confidence > 0.5 to increase or decrease detection sensitivity.
-Target Classes: Change class_id == 0 to target different COCO dataset classes (e.g., 2 for cars, 16 for dogs).
+1. **Frame Rate Sampling:** Modify if frame_count % 30 != 0: to change how frequently frames are evaluated.
+2. **Confidence Threshold:** Change confidence > 0.5 to increase or decrease detection sensitivity.
+3. **Target Classes:** Change class_id == 0 to target different COCO dataset classes (e.g., 2 for cars, 16 for dogs).
